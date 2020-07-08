@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
       - name: Build Web
-        run: flutter build webs
+        run: flutter build web
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@v1.5.0
         with:

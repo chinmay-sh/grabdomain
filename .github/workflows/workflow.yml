@@ -19,23 +19,20 @@ jobs:
           channel: 'beta' # Currently you have to use beta channel for Flutter web.
       - run: dart --version
       - run: flutter --version
-      - run: mkdir -p ./app
       - name: Upgrades flutter
         run: flutter pub get
-        working-directory: ./app
       - name: Enable Web
         run: flutter config --enable-web
-        working-directory: ./app
       - name: Install dependencies
         run: flutter pub get
-        working-directory: ./app
       - name: Build Web
         run: flutter build web
-        working-directory: ./app
-      - run: ls
+      - run: ls ./app
+      - run: ls ./build/
+      - run: ls ./web
       - name: Deploy
         run: |
-          cd ./app/build/web
+          cd ./build/web
           git init
           git config user.name  "CI"
           git config user.email "flutter-ci@github.com"

@@ -1,0 +1,14 @@
+{
+  "hosting": {
+    "site": "grabdomain",
+    "public": "build\\web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "/android/",
+      "/ios/",
+      "/web/"
+    ]
+  }
+}

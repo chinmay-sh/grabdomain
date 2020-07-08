@@ -17,14 +17,17 @@ jobs:
         with:
           flutter-version: '1.19.x' # you can use 1.12
           channel: 'beta' # Currently you have to use beta channel for Flutter web.
+      - run: dart --version
+      - run: flutter --version
+      - run: mkdir -p ./app
       - name: Upgrades flutter
-        run: flutter upgrade
+        run: flutter pub get
         working-directory: ./app
       - name: Enable Web
         run: flutter config --enable-web
         working-directory: ./app
       - name: Install dependencies
-        run: flutter packages get
+        run: flutter pub get
         working-directory: ./app
       - name: Build Web
         run: flutter build web

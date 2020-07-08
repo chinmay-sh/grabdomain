@@ -32,9 +32,10 @@ jobs:
       - name: Build Web
         run: flutter build web
         working-directory: ./app
+      - run: ls
       - name: Deploy
         run: |
-          cd app/build/web
+          cd ./app/build/web
           git init
           git config user.name  "CI"
           git config user.email "flutter-ci@github.com"

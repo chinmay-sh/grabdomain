@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 
 void main() => runApp(MaterialApp(
-  title: 'Responsive Layout',
+  title: 'Grab Domains',
   home: HomePage(),
   debugShowCheckedModeBanner: false,
 ),
@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Responsive Layout"),
+        title: Text("Home"),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
